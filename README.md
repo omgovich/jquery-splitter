@@ -1,3 +1,3 @@
-# jQuery Scroller
+# jQuery Splitter
 
 jQuery plugin for easy lists splitting.
