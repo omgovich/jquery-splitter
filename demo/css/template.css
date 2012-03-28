@@ -1,0 +1,32 @@
+﻿/*** --- Document params --- ***/
+body, html {
+	height:100%;
+	background:#FFF;
+	color:#000;
+	font:normal 12px/1.5 Tahoma, Arial, Verdana, sans-serif;
+}
+
+/*** --- Default objects --- ***/
+p {
+	padding:0.5em 0;
+}
+.clear {
+	clear:both;
+}
+
+
+/*** --- Links --- ***/
+a {
+	color:#00347b;
+	text-decoration:underline;
+}
+a:hover {
+	color:#375dbe;
+}
+
+
+/*** --- Page --- ***/
+.b-page {
+	width:1000px;
+	margin:0 auto;
+}
