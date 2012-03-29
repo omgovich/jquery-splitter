@@ -30,3 +30,12 @@ a:hover {
 	width:1000px;
 	margin:0 auto;
 }
+
+.list-container {
+	padding:20px;
+	overflow:hidden;
+}
+.list-column {
+	float:left;
+	padding:10px;
+}
