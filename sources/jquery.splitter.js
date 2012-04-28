@@ -69,7 +69,7 @@
 			};
 
 			// Render splitted list
-			$list.after($container);
+			$list.replaceWith($container);
 
 		});
 	
