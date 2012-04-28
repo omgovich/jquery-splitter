@@ -12,6 +12,7 @@
 		// Settings
 		var settings = $.extend({
 			columns: 2,
+			direction: 'vertical',
 			itemsSelector: 'li',
 			// container
 			containerTag: 'div',
@@ -25,29 +26,51 @@
 	
 		// Install splitter for each items
 		this.each(function(){
-			
+
+			// Variables and objects
 			var $list = $(this),
 			    $items = $list.find(settings.itemsSelector),
-				itemsInColumn = Math.ceil($items.length/settings.columns),
+			    itemsNumber = $items.length,
+			    $column = $('<'+settings.columnTag+'/>', {
+			    	'class': settings.columnClass
+			    }),
 			    $container = $('<'+settings.containerTag+'/>', {
-					class: settings.containerClass
-				});
+			    	'class': settings.containerClass
+			    });
 
-			for(var i=0; i<$items.length; i+=itemsInColumn) {
-				var $columnItems = $items.slice(i, i+itemsInColumn).clone(),
-					$column = $('<'+settings.columnTag+'/>', {
-						class: settings.columnClass
-					});
-				$column.append($columnItems);
-				$container.append($column);
+			// Create columns
+			for(var i=0; i<settings.columns; i++) $container.append( $column.clone() );
+			var $columns = $container.children();
+			$columns.first().addClass(settings.columnFirstClass);
+			$columns.last().addClass(settings.columnLastClass);
+
+			// Vertical split
+			function splitVertical(){
+				var itemsInColumn = Math.ceil(itemsNumber/settings.columns),
+				    column = 0;
+				for(var i=0; i<itemsNumber; i+=itemsInColumn) {
+					var $columnItems = $items.slice(i, i+itemsInColumn).clone();
+					$columns.eq(column++).append($columnItems);
+				};
 			};
-			
-			$container.find('> :first').addClass(settings.columnFirstClass);
-			$container.find('> :last').addClass(settings.columnLastClass);
-			
+
+			// Horizontal split
+			function splitHorizontal(){
+				$items.each(function(index){
+					$columns.eq(index%settings.columns).append($(this).clone());
+				});
+			};
+
+			// Add items in columns
+			if (settings.direction=='horizontal') {
+				splitHorizontal();
+			} else {
+				splitVertical();
+			};
+
+			// Render splitted list
 			$list.after($container);
 
-			
 		});
 	
 		return this;
