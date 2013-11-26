@@ -1,8 +1,6 @@
 /*
  * jQuery Splitter
- *
- * Copyright (c) 2011 Shilov Vlad [Omgovich] (http://omgovich.ru/)
- * 
+ * Copyright (c) 2013 Shilov Vlad [Omgovich] (http://omgovich.ru/)
  */
 
 (function($) {
@@ -62,11 +60,7 @@
 			};
 
 			// Add items in columns
-			if (settings.direction=='horizontal') {
-				splitHorizontal();
-			} else {
-				splitVertical();
-			};
+			if (settings.direction=='horizontal') splitHorizontal(); else splitVertical();
 
 			// Render splitted list
 			$list.replaceWith($container);

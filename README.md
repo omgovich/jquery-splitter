@@ -1,17 +1,25 @@
 # jQuery Splitter
 
-jQuery plugin to columnize lists.
+Flexible plugin for easy and fast columnize lists.
 
 ## Installation
 
 HTML:
 
+	<ul id="list">
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>...</li>
+		<li>Item N</li>
+	</ul>
+
+    <script src="path/to/jquery.js"></script>
     <script src="path/to/jquery.splitter.js"></script>
 
 JavaScript:
 
     $(function(){
-        $('selector').splitter();
+        $('#list').splitter();
     });
 
 ## Options
