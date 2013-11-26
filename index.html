@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery Splitter</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<!-- <link href="css/jquery.ui.css" rel="stylesheet" /> -->
+	<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-default shadow" role="navigation">
+
+		<div class="content">
+
+			<div class="navbar-header">
+				<span class="navbar-brand">$.splitter</span>
+			</div>
+
+			<a href="https://github.com/Omgovich/jquery-splitter/zipball/master" class="btn btn-primary navbar-btn">Download</a>
+
+			<ul class="nav navbar-nav">
+				<li><a href="https://github.com/Omgovich/jquery-splitter">GitHub-project</a></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="http://twitter.com/omgovich/">Twitter</a></li>
+				<li><a href="mailto:omgovich@ya.ru">Email</a></li>
+			</ul>
+
+		</div>
+
+	</nav>
+	<!--/Navbar -->
+
+	<!-- Container -->
+	<div class="content content-main">
+
+		<!-- Demo -->
+		<div class="demo shadow">
+			<form action="#">
+				<fieldset>
+					<label>Columns</label>
+					<div class="slider slider-columns" data-name="columns" data-min="2" data-max="10" data-value="5"></div>
+				</fieldset>
+				<fieldset>
+					<label>Items</label>
+					<div class="slider slider-items" data-name="items" data-min="10" data-max="50" data-value="25"></div>
+				</fieldset>
+				<fieldset class="demo-direction">
+					<label>Direction</label>
+					<div class="btn-group" data-toggle="buttons">
+						<label class="btn btn-primary active"><input type="radio" name="direction" value="vertical" checked> Vertical</label>
+						<label class="btn btn-primary"><input type="radio" name="direction" value="horizontal"> Horizontal</label>
+					</div>
+				</fieldset>
+			</form>
+			<div class="demo-body">
+			</div>
+		</div>
+		<!--/Demo -->
+
+	</div>
+	<!--/Container -->
+
+	<!-- JavaScript -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.ui.js"></script>
+	<script src="js/jquery.splitter.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/demo.js"></script>
+	<!-- JavaScript -->
+
+</body>
+</html>
