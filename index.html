@@ -9,60 +9,108 @@
 </head>
 <body>
 
-	<!-- Navbar -->
-	<nav class="navbar navbar-default shadow" role="navigation">
+	<!-- Page -->
+	<div class="page">
 
-		<div class="content">
+		<!-- Navbar -->
+		<nav class="navbar navbar-default shadow" role="navigation">
 
-			<div class="navbar-header">
-				<span class="navbar-brand">$.splitter</span>
+			<div class="content">
+
+				<div class="navbar-header">
+					<span class="navbar-brand">$.splitter</span>
+				</div>
+
+				<a href="https://github.com/Omgovich/jquery-splitter/zipball/master" class="btn btn-default navbar-btn">Download source (ZIP)</a>
+
+				<ul class="nav navbar-nav">
+					<li><a href="https://github.com/Omgovich/jquery-splitter">Open GitHub project</a></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="http://twitter.com/omgovich/">Twitter</a></li>
+					<li><a href="mailto:omgovich@ya.ru">Email</a></li>
+				</ul>
+
 			</div>
 
-			<a href="https://github.com/Omgovich/jquery-splitter/zipball/master" class="btn btn-primary navbar-btn">Download</a>
+		</nav>
+		<!--/Navbar -->
 
-			<ul class="nav navbar-nav">
-				<li><a href="https://github.com/Omgovich/jquery-splitter">GitHub-project</a></li>
-			</ul>
+		<!-- Container -->
+		<div class="content content-main">
 
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="http://twitter.com/omgovich/">Twitter</a></li>
-				<li><a href="mailto:omgovich@ya.ru">Email</a></li>
-			</ul>
+			<div class="title">Demo</div>
 
-		</div>
-
-	</nav>
-	<!--/Navbar -->
-
-	<!-- Container -->
-	<div class="content content-main">
-
-		<!-- Demo -->
-		<div class="demo shadow">
-			<form action="#">
-				<fieldset>
-					<label>Columns</label>
-					<div class="slider slider-columns" data-name="columns" data-min="2" data-max="10" data-value="5"></div>
-				</fieldset>
-				<fieldset>
-					<label>Items</label>
-					<div class="slider slider-items" data-name="items" data-min="10" data-max="50" data-value="25"></div>
-				</fieldset>
-				<fieldset class="demo-direction">
-					<label>Direction</label>
-					<div class="btn-group" data-toggle="buttons">
-						<label class="btn btn-primary active"><input type="radio" name="direction" value="vertical" checked> Vertical</label>
-						<label class="btn btn-primary"><input type="radio" name="direction" value="horizontal"> Horizontal</label>
+			<!-- Demo -->
+			<div class="demo shadow">
+				<form action="#">
+					<fieldset>
+						<label>Items</label>
+						<div class="slider slider-items" data-name="items" data-min="10" data-max="50" data-value="25"></div>
+					</fieldset>
+					<fieldset>
+						<label>Columns</label>
+						<div class="slider slider-columns" data-name="columns" data-min="2" data-max="10" data-value="5"></div>
+					</fieldset>
+					<fieldset class="demo-direction">
+						<label>Direction</label>
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-default active"><input type="radio" name="direction" value="horizontal" checked> Horizontal</label>
+							<label class="btn btn-default"><input type="radio" name="direction" value="vertical"> Vertical</label>
+						</div>
+					</fieldset>
+				</form>
+				<div class="demo-body"></div>
+				<div class="demo-footer">
+					<div class="demo-footer__include">
+						<p>Include jQuery and Splitter</p>
+<pre>&lt;script src="jquery.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.splitter.js"&gt;&lt;/script&gt;</pre>
 					</div>
-				</fieldset>
-			</form>
-			<div class="demo-body">
+					<div class="demo-footer__html">
+						<p>List example</p>
+<pre>&lt;ul class="example"&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt; .... &lt;/li&gt;
+    &lt;li&gt;Item <span class="demo-footer__html__count"></span>&lt;/li&gt;
+&lt;/ul&gt;</pre>
+					</div>
+					<div class="demo-footer__js">
+						<p>JavaScript</p>
+<pre>$('.example').splitter({
+    columns: <span class="demo-footer__html__columns"></span>,
+    direction: '<span class="demo-footer__html__direction"></span>'
+});</pre>
+					</div>
+				</div>
 			</div>
+			<!--/Demo -->
+
+			<!-- Download -->
+			<div class="download">
+				<a href="https://github.com/Omgovich/jquery-splitter/zipball/master" class="btn btn-default btn-lg navbar-btn">Download source (ZIP)</a>
+			</div>
+			<!--/Download -->
+
 		</div>
-		<!--/Demo -->
+		<!--/Container -->
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="content">
+				<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				<a class="footer__omgovich" href="http://omgovich.ru/" target="_blank">
+					<img src="images/logo.png" alt="Omgovich" />
+					Shilov Vlad (Omgovich)
+				</a>
+			</div>
+		</footer>
+		<!--/Footer -->
 
 	</div>
-	<!--/Container -->
+	<!--/Page -->
 
 	<!-- JavaScript -->
 	<script src="js/jquery.js"></script>

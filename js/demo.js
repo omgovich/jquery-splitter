@@ -2,14 +2,24 @@ $(function(){
 
 	// blocks and vars
 	var $demo = $('.demo'),
-	    $sliders = $demo.find('.slider'),
-	    $body = $demo.find('.demo-body');
+	    $title = $('.title'),
+	    $navbar = $('.navbar'),
+	    $footer = $('.footer'),
+	    $download = $('.download'),
+	    $form = $demo.find('form'),
+	    $sliders = $form.find('.slider'),
+	    $body = $demo.find('.demo-body'),
+	    $foot = $demo.find('.demo-footer'),
+	    $footCount = $foot.find('.demo-footer__html__count'),
+	    $footColumns = $foot.find('.demo-footer__html__columns'),
+	    $footDirection = $foot.find('.demo-footer__html__direction'),
+	    duration = 450;
 
 	// form params
 	var params = {
 		columns: 0,
 		items: 0,
-		direction: 'vertical'
+		direction: 'horizontal'
 	};
 
 	// each sliders items
@@ -54,9 +64,28 @@ $(function(){
 		for (var i=0; i<params.items; i++) $list.append('<li>Item '+(i+1)+'</li>');
 		$list.appendTo($body.empty());
 		$list.splitter({ columns: params.columns, direction: params.direction });
+		$footCount.text(params.items);
+		$footColumns.text(params.columns);
+		$footDirection.text(params.direction);
 	};
 
 	// init
 	render();
+
+	// wow-wow
+	$navbar.find('> *').css({ opacity:0 });
+	$title.delay(duration*1).fadeTo(duration*2, 1);
+	$demo.delay(duration*0.5).fadeTo(duration*2, 1);
+	$form.delay(duration*1.5).fadeTo(duration, 1);
+	$body.delay(duration*2.0).fadeTo(duration, 1);
+	$foot.delay(duration*2.5).fadeTo(duration, 1);
+	$download.delay(duration*3).fadeTo(duration, 1);
+	$navbar.css({top:-70}).delay(duration*3).animate({opacity:1, top:0}, duration*1.5, function(){
+		$navbar.find('> *').each(function(index){
+			$(this).delay(duration*index).fadeTo(duration, 1);
+		});
+	});
+	$footer.css({bottom:-70}).delay(duration*3).animate({opacity:1, bottom:0}, duration*1.5);
+
 
 });

@@ -1,7 +1,14 @@
 html, body {
 	height: 100%;
 }
-body {
+
+
+/* --- Page --- */
+.page {
+	position: relative;
+	overflow: hidden;
+	min-width: 1000px;
+	min-height: 100%;
 	background: #222 url(../images/bg.jpg) no-repeat 50% 50%;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -46,9 +53,35 @@ body {
 }
 
 
+/* --- Title --- */
+h1 {
+	color: #FFF;
+	text-align: center;
+	padding: 0;
+	margin: 0 0 30px;
+	font-size: 60px;
+	letter-spacing: 1px;
+	line-height: 1;
+	text-shadow: 0 4px 20px #000;
+}
+
+
+/* --- Title --- */
+.title {
+	text-align: center;
+	padding: 0 0 15px 0;
+	color: #FFF;
+	font-size: 36px;
+	line-height: 1;
+	text-shadow: 0 0 15px rgba(0,0,0, 0.5);
+}
+
+
 /* --- Demo --- */
 .demo {
+	position: relative;
 	background: #FFF;
+	margin-bottom: 70px;
 }
 .demo form {
 	overflow: hidden;
@@ -106,14 +139,36 @@ body {
 	box-shadow: 0 1px 3px #d9d9d9;
 }
 .demo-body {
-	padding: 15px 30px;
+	padding: 25px 15px;
+}
+.demo-footer {
+	overflow: hidden;
+	padding: 25px 30px;
+	border-top: 1px solid #e0e0e0;
+}
+.demo-footer pre:last-child {
+	margin-bottom: 0;
+}
+.demo-footer__html {
+	float: left;
+	width: 25%;
+	margin-right: 2%;
+}
+.demo-footer__include {
+	float: left;
+	width: 42%;
+	margin-right: 2%;
+}
+.demo-footer__js {
+	float: left;
+	width: 29%;
 }
 
 
 /* --- Main --- */
 .content-main {
 	padding-top: 40px;
-	padding-bottom: 70px;
+	padding-bottom: 140px;
 }
 .content-main .panel {
 	border: none;
@@ -141,10 +196,96 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 10%;
+	box-shadow: 1px 0 0 #EEE;
+}
+.list-container .list-column_last {
+	box-shadow: none;
 }
 .list-container .list-column li {
 	margin: 0;
 	padding: 4px 0;
 	list-style: none;
 	text-align: center;
+}
+
+
+/* --- Download --- */
+.download {
+	text-align: center;
+}
+.download .btn-default {
+	padding: 20px 35px;
+	border-color: #FFF;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: 0 3px 15px rgba(0,0,0, 0.5);
+	-moz-box-shadow: 0 3px 15px rgba(0,0,0, 0.5);
+	box-shadow: 0 3px 15px rgba(0,0,0, 0.5);
+}
+
+
+/* --- Footer --- */
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #000;
+	background-color: rgba(0,0,0, 0.5);
+	font-size: 12px;
+}
+.footer .content {
+	overflow: hidden;
+	padding: 10px 0;
+	height: 55px;
+}
+.footer__omgovich {
+	float: left;
+	color: #FFF;
+	color: rgba(255,255,255, 0.75);
+	line-height: 35px;
+	text-decoration: none;
+	-webkit-transition: color 0.25s;
+	-moz-transition: color 0.25s;
+	-ms-transition: color 0.25s;
+	-o-transition: color 0.25s;
+	transition: color 0.25s;
+}
+.footer__omgovich:hover {
+	color: #FFF;
+	color: rgba(255,255,255, 1);
+	text-decoration: none;
+}
+.footer__omgovich img {
+	float: left;
+	margin-right: 10px;
+	opacity: 0.75;
+	-webkit-transition: opacity 0.25s;
+	-moz-transition: opacity 0.25s;
+	-ms-transition: opacity 0.25s;
+	-o-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+}
+.footer__omgovich:hover img {
+	opacity: 1;
+}
+.footer .twitter-share-button {
+	float: right;
+	margin-top: 7px;
+}
+
+
+/* --- Wow --- */
+.navbar,
+.title,
+.demo,
+.demo form,
+.demo-body,
+.demo-footer,
+.download,
+.footer {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
 }
