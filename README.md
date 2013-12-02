@@ -1,6 +1,7 @@
 # jQuery Splitter
 
 Flexible plugin for easy and fast columnize lists.
+
 [Demo](http://omgovich.github.io/jquery-splitter/)
 
 ## Installation
