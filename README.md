@@ -1,6 +1,7 @@
 # jQuery Splitter
 
 Flexible plugin for easy and fast columnize lists.
+[Demo](http://omgovich.github.io/jquery-splitter/)
 
 ## Installation
 
@@ -18,7 +19,10 @@ HTML:
 
 JavaScript:
 
-	$('.example').splitter();
+	$('.example').splitter({
+		columns: 5,
+		direction: 'horizontal'
+	});
 
 ## Options
 
