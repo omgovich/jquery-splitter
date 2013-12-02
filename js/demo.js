@@ -75,17 +75,17 @@ $(function(){
 	// wow-wow
 	$navbar.find('> *').css({ opacity:0 });
 	$title.delay(duration*1).fadeTo(duration*2, 1);
-	$demo.delay(duration*0.5).fadeTo(duration*2, 1);
+	$demo.delay(duration*0.5).fadeTo(duration*2, 1).css({ top:35 }).animate({ top:0 }, { duration:duration*2, queue:false });
 	$form.delay(duration*1.5).fadeTo(duration, 1);
 	$body.delay(duration*2.0).fadeTo(duration, 1);
 	$foot.delay(duration*2.5).fadeTo(duration, 1);
 	$download.delay(duration*3).fadeTo(duration, 1);
-	$navbar.css({top:-70}).delay(duration*3).animate({opacity:1, top:0}, duration*1.5, function(){
+	$navbar.css({ top:-70 }).delay(duration*3).animate({ opacity:1, top:0 }, duration*1.5, function(){
 		$navbar.find('> *').each(function(index){
 			$(this).delay(duration*index).fadeTo(duration, 1);
 		});
 	});
-	$footer.css({bottom:-70}).delay(duration*3).animate({opacity:1, bottom:0}, duration*1.5);
+	$footer.css({ bottom:-70} ).delay(duration*3.5).animate({ opacity:1, bottom:0 }, duration*1.5);
 
 
 });

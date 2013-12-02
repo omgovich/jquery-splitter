@@ -9,9 +9,13 @@ html, body {
 	overflow: hidden;
 	min-width: 1000px;
 	min-height: 100%;
-	background: #222 url(../images/bg.jpg) no-repeat 50% 50%;
-	-webkit-background-size: cover;
-	background-size: cover;
+	background: #222222;
+	background: -moz-linear-gradient(top,  #222222 0%, #444444 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#222222), color-stop(100%,#444444));
+	background: -webkit-linear-gradient(top,  #222222 0%,#444444 100%);
+	background: -o-linear-gradient(top,  #222222 0%,#444444 100%);
+	background: -ms-linear-gradient(top,  #222222 0%,#444444 100%);
+	background: linear-gradient(to bottom,  #222222 0%,#444444 100%);
 }
 
 
@@ -211,6 +215,7 @@ h1 {
 
 /* --- Download --- */
 .download {
+	position: relative;
 	text-align: center;
 }
 .download .btn-default {
