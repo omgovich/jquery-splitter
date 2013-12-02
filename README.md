@@ -6,7 +6,7 @@ Flexible plugin for easy and fast columnize lists.
 
 HTML:
 
-	<ul id="list">
+	<ul class="example">
 		<li>Item 1</li>
 		<li>Item 2</li>
 		<li>...</li>
@@ -18,18 +18,17 @@ HTML:
 
 JavaScript:
 
-    $(function(){
-        $('#list').splitter();
-    });
+	$('.example').splitter();
 
 ## Options
 
-* columns — number of columns (default: 2)
-* direction — direction of splitting: 'vertical' or 'horizontal' (default: 'vertical')
-* itemsSelector — selector to find list items (default: 'li')
-* containerTag — tag of columns wrapper (default: 'div')
-* containerClass — class of columns wrapper (default: 'list-container')
-* columnTag — tag of columns (default: 'ul')
-* columnClass — class of columns (default: 'list-column')
-* columnFirstClass — class of first column (default: 'list-column_first')
-* columnLastClass — class of last column (default: 'list-column_last')
+* `columns` — number of columns (default: 2)
+* `direction` — direction of splitting: 'vertical' or 'horizontal' (default: 'vertical')
+* `itemsSelector` — selector to find list items (default: 'li')
+* `containerTag` — tag of columns wrapper (default: 'div')
+* `containerClass` — class of columns wrapper (default: 'list-container')
+* `columnTag` — tag of columns (default: 'ul')
+* `columnClass` — class of columns (default: 'list-column')
+* `columnFirstClass` — class of first column (default: 'list-column_first')
+* `columnLastClass` — class of last column (default: 'list-column_last')
+* `columnAllowEmpty` — allow empty columns (default: false)
