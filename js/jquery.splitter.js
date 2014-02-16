@@ -32,7 +32,7 @@
 
 			// Variables and objects
 			var $list = $(this),
-			    $items = $list.find(settings.itemsSelector),
+			    $items = $list.children(settings.itemsSelector),
 			    itemsNumber = $items.length,
 			    $column = $('<'+settings.columnTag+'/>', {
 			    	'class': settings.columnClass
