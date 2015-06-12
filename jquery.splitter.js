@@ -18,7 +18,8 @@
 		columnClass: 'list-column',
 		columnFirstClass: 'list-column_first',
 		columnLastClass: 'list-column_last',
-		columnAllowEmpty: false
+		columnAllowEmpty: false,
+		cloneEvent: false
 	};
 	
 	// Splitter function
@@ -52,7 +53,7 @@
 				var itemsInColumn = Math.ceil(itemsNumber/settings.columns),
 				    column = 0;
 				for (var i=0; i<itemsNumber; i+=itemsInColumn) {
-					var $columnItems = $items.slice(i, i+itemsInColumn).clone();
+					var $columnItems = $items.slice(i, i+itemsInColumn).clone(settings.cloneEvent);
 					$columns.eq(column++).append($columnItems);
 				};
 			};
@@ -60,7 +61,7 @@
 			// Horizontal split
 			function splitHorizontal(){
 				$items.each(function(index){
-					$columns.eq(index%settings.columns).append($(this).clone());
+					$columns.eq(index%settings.columns).append($(this).clone(settings.cloneEvent));
 				});
 			};
 
